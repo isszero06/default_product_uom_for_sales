@@ -7,9 +7,9 @@
     "website": "https://www.erpzero.com",
     "email": "sales@erpzero.com",
     "sequence": 0,
-    "summary": """ Set default Unit of Measure value of a product in sales order lines""",
+    "summary": """ default Unit value of a product in sales and Purchase UoM for Bill """,
     'description': """
-        Set default Unit of Measure value of a product in sales order lines
+        Set default Unit value of a product in sales and Purchase UoM for Bill
       """,
     "depends": ["sale_management","account"],
     "data": [
