@@ -45,13 +45,13 @@ class AccountMoveLine(models.Model):
     def _compute_product_uom_id(self):
         res = super(AccountMoveLine, self)._compute_product_uom_id()
         for line in self:
-            if line.move_id.is_sale_document(include_templateeipts=True):
+            if line.move_id.is_sale_document(include_receipts=True):
                 if line.product_id:
                     if line.product_id.product_tmpl_id.sale_uom_id:
                         line.product_uom_id = line.product_id.product_tmpl_id.sale_uom_id
                     else:
                         line.product_uom_id = line.product_id.product_tmpl_id.uom_id
-            if line.move_id.is_purchase_document(include_templateeipts=True):
+            if line.move_id.is_purchase_document(include_receipts=True):
                 if line.product_id:
                     if line.product_id.product_tmpl_id.uom_po_id:
                         line.product_uom_id = line.product_id.product_tmpl_id.uom_po_id
