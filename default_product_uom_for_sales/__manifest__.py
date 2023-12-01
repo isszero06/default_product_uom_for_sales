@@ -9,7 +9,7 @@
     "sequence": 0,
     "summary": """ default Unit value of a product in sales and Purchase UoM for Bill """,
     'description': """
-        Set default Unit value of a product in sales and Purchase UoM for Bill
+        Set teh default Product Unit value of a product in sales and Purchase UoM for Bill
       """,
     "depends": ["sale_management","account"],
     "data": [
